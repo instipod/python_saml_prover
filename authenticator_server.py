@@ -42,6 +42,9 @@ def retrieve():
         #bad secret
         return json.dumps({'error': "bad secret"}), 401
 
+    if (len(values.keys()) >= MAX_TOKENS):
+        values = dict()
+
     token = get_random_string(32)
     if (token in values.keys()):
         #generate another
