@@ -36,6 +36,7 @@ def index():
 
 @app.route('/retrieve')
 def retrieve():
+    global values
     data = request.args
 
     if (data["secret"] is None or str(data["secret"]) != SECRET):
