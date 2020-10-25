@@ -1,0 +1,3 @@
+[submodule "flask-saml2"]
+	path = flask-saml2
+	url = https://github.com/instipod/flask-saml2.git
