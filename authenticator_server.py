@@ -140,6 +140,8 @@ app.config['SAML2_IDENTITY_PROVIDERS'] = [
 ]
 
 app.register_blueprint(sp.create_blueprint(), url_prefix='/saml/')
+#dev only
+#app.run("10.82.0.103", "9000")
 
 server = wsgiserver.WSGIServer(app, host=HTTP_BIND_ADDRESS, port=HTTP_PORT)
 server.start()
